@@ -1,0 +1,6 @@
+{
+  "name": "ClutchAI",
+  "description": "A proactive, AI-powered warm-minimalist flat UI productivity dashboard and commitment manager for last-minute action.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

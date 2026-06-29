@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-beige-bg: #F5EBE0;
+  --color-ivory-card: #FDFBF7;
+  --color-terracotta: #D96B43;
+  --color-terracotta-hover: #C65A34;
+  --color-maroon: #581825;
+  --color-maroon-hover: #48111B;
+  --color-peach: #FBCD9B;
+  --color-peach-light: #FDE8CF;
+  --color-peach-dark: #EAA86C;
+}
+
+body {
+  background-color: #F5EBE0;
+  color: #2F241F;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom aesthetic scrollbars matching our warm flat UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EBE0;
+}
+::-webkit-scrollbar-thumb {
+  background: #FBCD9B;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D96B43;
+}
+
+/* Dynamic glow/pulse styles for critical tasks and alerts */
+@keyframes urgent-pulse {
+  0%, 100% {
+    border-color: #581825;
+    box-shadow: 0 0 0 0 rgba(88, 24, 37, 0.15);
+  }
+  50% {
+    border-color: #D96B43;
+    box-shadow: 0 0 8px 2px rgba(217, 107, 67, 0.25);
+  }
+}
+
+.urgent-border-pulse {
+  animation: urgent-pulse 2s infinite ease-in-out;
+}

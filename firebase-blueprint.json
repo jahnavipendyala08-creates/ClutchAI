@@ -1,0 +1,66 @@
+{
+  "collections": {
+    "tasks": {
+      "fields": {
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "priority": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "dueTime": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "createdAt": { "type": "timestamp" }
+      },
+      "rules": {
+        "read": "true",
+        "write": "true"
+      }
+    },
+    "bills": {
+      "fields": {
+        "title": { "type": "string" },
+        "amount": { "type": "number" },
+        "dueDate": { "type": "string" },
+        "status": { "type": "string" },
+        "category": { "type": "string" },
+        "paid": { "type": "boolean" },
+        "createdAt": { "type": "timestamp" }
+      },
+      "rules": {
+        "read": "true",
+        "write": "true"
+      }
+    },
+    "schedule": {
+      "fields": {
+        "time": { "type": "string" },
+        "duration": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string" },
+        "createdAt": { "type": "timestamp" }
+      },
+      "rules": {
+        "read": "true",
+        "write": "true"
+      }
+    },
+    "profile": {
+      "fields": {
+        "name": { "type": "string" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "rules": {
+        "read": "true",
+        "write": "true"
+      }
+    },
+    "settings": {
+      "fields": {
+        "seeded": { "type": "boolean" }
+      },
+      "rules": {
+        "read": "true",
+        "write": "true"
+      }
+    }
+  }
+}
